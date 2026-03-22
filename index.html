@@ -9,24 +9,39 @@
 
 <body>
 
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <span class="logo">Lahari</span>
+      <div>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero fade-in">
     <h1>Hi, I'm Lahari 👋</h1>
-    <p class="tagline">Building GenAI Systems with a Product Mindset</p>
+
+    <p class="tagline">
+      Building GenAI Systems with a Product Mindset
+    </p>
+
     <p class="subtext">
       I design AI applications that are usable, explainable, and built for real-world impact.
     </p>
 
-    <a href="#projects" class="cta">View My Work ↓</a>
+    <a href="#projects" class="cta">Explore My Work ↓</a>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
-    <h2>Selected Work</h2>
+    <h2 class="fade-in">Selected Work</h2>
 
-    <!-- PROJECT 1 -->
-    <div class="card highlight">
-      <img src="assets/demo.png" alt="GenAI Demo" />
+    <!-- FEATURED PROJECT -->
+    <div class="card highlight fade-in">
+      <img src="assets/demo.png" />
 
       <h3>GenAI Policy Coach ⭐</h3>
       <p class="subtitle">
@@ -34,8 +49,8 @@
       </p>
 
       <p>
-        A structured GenAI system where users can switch between prompt frameworks
-        and observe differences in response quality.
+        Interactive system where users switch between prompt frameworks 
+        to explore differences in response clarity and structure.
       </p>
 
       <div class="tags">
@@ -50,79 +65,75 @@
       </div>
     </div>
 
-    <!-- PROJECT 2 -->
-    <div class="card">
-      <img src="assets/stock.png" alt="Stock Project" />
+    <!-- OTHER PROJECTS -->
+    <div class="grid">
 
-      <h3>Stock Prediction System</h3>
+      <div class="card fade-in">
+        <img src="assets/stock.png" />
 
-      <p>
-        LSTM-based model to forecast stock trends with a focus on usability.
-      </p>
+        <h3>Stock Prediction</h3>
+        <p>LSTM-based forecasting system focused on usability.</p>
 
-      <p class="insight">
-        <b>Insight:</b> Interpretability matters more than raw accuracy.
-      </p>
+        <p class="insight">
+          <b>Insight:</b> Interpretability > accuracy for users
+        </p>
 
-      <div class="buttons">
-        <a href="#">View Code</a>
+        <div class="buttons">
+          <a href="#">View Code</a>
+        </div>
       </div>
-    </div>
 
-    <!-- PROJECT 3 -->
-    <div class="card">
-      <img src="assets/whatsapp.png" alt="WhatsApp AI" />
+      <div class="card fade-in">
+        <img src="assets/whatsapp.png" />
 
-      <h3>AI WhatsApp Sales Agent</h3>
+        <h3>AI WhatsApp Agent</h3>
+        <p>Automates lead qualification and customer conversations.</p>
 
-      <p>
-        AI assistant for automating lead qualification and customer conversations.
-      </p>
+        <p class="insight">
+          <b>Insight:</b> Faster responses → higher conversions
+        </p>
 
-      <p class="insight">
-        <b>Insight:</b> Speed of response directly impacts conversion.
-      </p>
-
-      <div class="buttons">
-        <a href="#">View Code</a>
+        <div class="buttons">
+          <a href="#">View Code</a>
+        </div>
       </div>
-    </div>
 
+    </div>
   </section>
 
   <!-- THINKING -->
-  <section>
+  <section class="fade-in">
     <h2>How I Think</h2>
 
     <div class="thinking">
-      <p>I don’t just build models — I design systems.</p>
+      <p>I design AI systems, not just models.</p>
 
       <ul>
-        <li>Prioritize usability over complexity</li>
-        <li>Treat prompt design as a core system component</li>
-        <li>Evaluate outputs, not just generate them</li>
+        <li>Usability over complexity</li>
+        <li>Prompt design as core system layer</li>
+        <li>Evaluation-driven development</li>
       </ul>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section>
+  <section class="fade-in">
     <h2>Experience</h2>
     <p><b>Data Scientist @ EXL</b> (2+ years)</p>
   </section>
 
   <!-- CONTACT -->
-  <section>
+  <section id="contact" class="fade-in">
     <h2>Connect</h2>
     <p>Open to GenAI & Product roles</p>
 
     <div class="buttons">
-      <a href="https://github.com/vl-18">GitHub</a>
-      <a href="https://www.linkedin.com/in/lahari-vippagunta-7a257b192/">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
     </div>
   </section>
 
+  <script src="script.js"></script>
+
 </body>
 </html>
-
-    
