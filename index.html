@@ -3,25 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lahari | GenAI Portfolio</title>
+  <title>Lahari | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-content">
-      <span class="logo">Lahari</span>
-      <div>
-        <a href="#projects">Work</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-
   <!-- HERO -->
-  <section class="hero fade-in">
+  <section class="hero">
     <h1>Hi, I'm Lahari 👋</h1>
 
     <p class="tagline">
@@ -35,105 +24,93 @@
     <a href="#projects" class="cta">Explore My Work ↓</a>
   </section>
 
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>About Me</h2>
+
+    <p>
+      I'm a Data Scientist with ~2 years of experience working on AI and analytics problems.
+      I’m particularly interested in Generative AI, prompt engineering, and building systems
+      that bridge the gap between technical capability and real-world user needs.
+    </p>
+  </section>
+
   <!-- PROJECTS -->
-  <section id="projects">
-    <h2 class="fade-in">Selected Work</h2>
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
 
-    <!-- FEATURED PROJECT -->
-    <div class="card highlight fade-in">
-      <img src="assets/demo.png" />
+    <div class="project-grid">
 
-      <h3>GenAI Policy Coach ⭐</h3>
-      <p class="subtitle">
-        PromptOps-driven RAG platform with CRISPE & CRAFT frameworks
-      </p>
+      <!-- PROJECT 1 -->
+      <div class="project-card">
+        <h3>GenAI Policy Coach</h3>
 
-      <p>
-        Interactive system where users switch between prompt frameworks 
-        to explore differences in response clarity and structure.
-      </p>
-
-      <div class="tags">
-        <span>RAG</span>
-        <span>PromptOps</span>
-        <span>Streamlit</span>
-      </div>
-
-      <div class="buttons">
-        <a href="#">View Code</a>
-        <a href="#">Live Demo</a>
-      </div>
-    </div>
-
-    <!-- OTHER PROJECTS -->
-    <div class="grid">
-
-      <div class="card fade-in">
-        <img src="assets/stock.png" />
-
-        <h3>Stock Prediction</h3>
-        <p>LSTM-based forecasting system focused on usability.</p>
-
-        <p class="insight">
-          <b>Insight:</b> Interpretability > accuracy for users
+        <p>
+          PromptOps-driven RAG system with CRISPE & CRAFT frameworks for structured response generation.
         </p>
 
-        <div class="buttons">
-          <a href="#">View Code</a>
+        <div class="tech">
+          <span>RAG</span>
+          <span>Streamlit</span>
+          <span>LLMs</span>
         </div>
+
+        <a href="https://github.com/vl-18/promptops-rag-platform" target="_blank">
+          View on GitHub →
+        </a>
       </div>
 
-      <div class="card fade-in">
-        <img src="assets/whatsapp.png" />
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <h3>Stock Prediction System</h3>
 
+        <p>
+          LSTM-based model to forecast stock trends with focus on usability and visualization.
+        </p>
+
+        <div class="tech">
+          <span>LSTM</span>
+          <span>Python</span>
+          <span>Streamlit</span>
+        </div>
+
+        <a href="#" target="_blank">
+          View on GitHub →
+        </a>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card">
         <h3>AI WhatsApp Agent</h3>
-        <p>Automates lead qualification and customer conversations.</p>
 
-        <p class="insight">
-          <b>Insight:</b> Faster responses → higher conversions
+        <p>
+          AI assistant for automating customer conversations and lead qualification workflows.
         </p>
 
-        <div class="buttons">
-          <a href="#">View Code</a>
+        <div class="tech">
+          <span>LLM</span>
+          <span>Automation</span>
+          <span>Chat AI</span>
         </div>
+
+        <a href="#" target="_blank">
+          View on GitHub →
+        </a>
       </div>
 
     </div>
-  </section>
-
-  <!-- THINKING -->
-  <section class="fade-in">
-    <h2>How I Think</h2>
-
-    <div class="thinking">
-      <p>I design AI systems, not just models.</p>
-
-      <ul>
-        <li>Usability over complexity</li>
-        <li>Prompt design as core system layer</li>
-        <li>Evaluation-driven development</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="fade-in">
-    <h2>Experience</h2>
-    <p><b>Data Scientist @ EXL</b> (2+ years)</p>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="fade-in">
-    <h2>Connect</h2>
-    <p>Open to GenAI & Product roles</p>
+  <section class="contact">
+    <h2>Contact</h2>
 
-    <div class="buttons">
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
-    </div>
+    <p>Email: your.email@gmail.com</p>
+    <p>
+      <a href="#">LinkedIn</a> |
+      <a href="https://github.com/vl-18">GitHub</a>
+    </p>
   </section>
-
-  <script src="script.js"></script>
 
 </body>
 </html>
