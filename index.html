@@ -1,129 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lahari | GenAI Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lahari | GenAI Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Lahari Vippagunta</h1>        
-        <h2>Hi, I'm Lahari 👋</h2>
-        <p class="subtitle">
-            Gen AI Engineer @ EXL | Building AI Systems 
-        </p>
-        <p class="description">
-            I design AI applications that are not just technically sound,
-            but usable, explainable, and aligned with real-world needs.
-        </p>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Hi, I'm Lahari 👋</h1>
+    <p class="tagline">Building GenAI Systems with a Product Mindset</p>
+    <p class="subtext">
+      I design AI applications that are usable, explainable, and built for real-world impact.
+    </p>
 
-        <a href="#projects" class="cta-button">View My Work ↓</a>
-    </section>
+    <a href="#projects" class="cta">View My Work ↓</a>
+  </section>
 
-    <!-- SELECTED WORK -->
-    <section id="projects">
-        <h2>Selected Work</h2>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Selected Work</h2>
 
-        <div class="project">
-            <h3>GenAI Policy Coach</h3>
-            <p>
-                A RAG-based assistant designed to answer policy questions with grounded,
-                traceable responses using structured retrieval and prompt frameworks.
-            </p>
+    <!-- PROJECT 1 -->
+    <div class="card highlight">
+      <img src="assets/demo.png" alt="GenAI Demo" />
 
-            <ul>
-                <li>Built modular ingestion + embedding pipeline</li>
-                <li>Integrated prompt frameworks (CRISPE, CRAFT)</li>
-                <li>Designed for explainability and evaluation</li>
-            </ul>
+      <h3>GenAI Policy Coach ⭐</h3>
+      <p class="subtitle">
+        PromptOps-driven RAG platform with CRISPE & CRAFT frameworks
+      </p>
 
-            <p class="insight">
-                <b>Key Insight:</b> Accuracy alone isn’t enough — response grounding and clarity matter more in enterprise AI.
-            </p>
+      <p>
+        A structured GenAI system where users can switch between prompt frameworks
+        and observe differences in response quality.
+      </p>
 
-            <a href="#" class="link">View Code</a>
-        </div>
+      <div class="tags">
+        <span>RAG</span>
+        <span>PromptOps</span>
+        <span>Streamlit</span>
+      </div>
 
-        <div class="project">
-            <h3>Stock Prediction System</h3>
-            <p>
-                LSTM-based model to forecast Indian stock trends with a simplified user interface.
-            </p>
+      <div class="buttons">
+        <a href="#">View Code</a>
+        <a href="#">Live Demo</a>
+      </div>
+    </div>
 
-            <ul>
-                <li>Adapted model for NSE stocks</li>
-                <li>Focused on usability over raw model complexity</li>
-            </ul>
+    <!-- PROJECT 2 -->
+    <div class="card">
+      <img src="assets/stock.png" alt="Stock Project" />
 
-            <p class="insight">
-                <b>Key Insight:</b> Users care more about interpretability than prediction accuracy alone.
-            </p>
+      <h3>Stock Prediction System</h3>
 
-            <a href="#" class="link">View Code</a>
-        </div>
+      <p>
+        LSTM-based model to forecast stock trends with a focus on usability.
+      </p>
 
-        <div class="project">
-            <h3>AI WhatsApp Sales Agent</h3>
-            <p>
-                Concept + prototype for automating lead qualification and customer support
-                for Indian businesses using LLMs.
-            </p>
+      <p class="insight">
+        <b>Insight:</b> Interpretability matters more than raw accuracy.
+      </p>
 
-            <ul>
-                <li>Designed conversation flows for sales scenarios</li>
-                <li>Focused on response speed and conversion</li>
-            </ul>
+      <div class="buttons">
+        <a href="#">View Code</a>
+      </div>
+    </div>
 
-            <p class="insight">
-                <b>Key Insight:</b> The biggest gap in AI is not capability — it's adoption and integration.
-            </p>
+    <!-- PROJECT 3 -->
+    <div class="card">
+      <img src="assets/whatsapp.png" alt="WhatsApp AI" />
 
-            <a href="#" class="link">View Code</a>
-        </div>
-    </section>
+      <h3>AI WhatsApp Sales Agent</h3>
 
-    <!-- HOW I THINK -->
-    <section>
-        <h2>How I Think</h2>
+      <p>
+        AI assistant for automating lead qualification and customer conversations.
+      </p>
 
-        <p>
-            I approach AI systems from a product lens — focusing not just on what a model can do,
-            but what a user actually needs.
-        </p>
+      <p class="insight">
+        <b>Insight:</b> Speed of response directly impacts conversion.
+      </p>
 
-        <ul>
-            <li>I prioritize clarity over complexity</li>
-            <li>I design for real-world constraints, not ideal scenarios</li>
-            <li>I experiment with prompt design and evaluation frameworks</li>
-        </ul>
-    </section>
+      <div class="buttons">
+        <a href="#">View Code</a>
+      </div>
+    </div>
 
-    <!-- ABOUT -->
-    <section>
-        <h2>About Me</h2>
+  </section>
 
-        <p>
-            I'm a Data Scientist at EXL with ~2 years of experience working on AI and analytics problems.
-        </p>
+  <!-- THINKING -->
+  <section>
+    <h2>How I Think</h2>
 
-        <p>
-            I’m particularly interested in GenAI, product thinking, and building systems
-            that bridge the gap between technical capability and user value.
-        </p>
-    </section>
+    <div class="thinking">
+      <p>I don’t just build models — I design systems.</p>
 
-    <!-- CONTACT -->
-    <section>
-        <h2>Connect</h2>
+      <ul>
+        <li>Prioritize usability over complexity</li>
+        <li>Treat prompt design as a core system component</li>
+        <li>Evaluate outputs, not just generate them</li>
+      </ul>
+    </div>
+  </section>
 
-        <ul class="contact">
-            <li><a href="https://github.com/vl-18">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/lahari-vippagunta-7a257b192/">LinkedIn</a></li>
-        </ul>
-    </section>
+  <!-- EXPERIENCE -->
+  <section>
+    <h2>Experience</h2>
+    <p><b>Data Scientist @ EXL</b> (2+ years)</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Connect</h2>
+    <p>Open to GenAI & Product roles</p>
+
+    <div class="buttons">
+      <a href="https://github.com/vl-18">GitHub</a>
+      <a href="https://www.linkedin.com/in/lahari-vippagunta-7a257b192/">LinkedIn</a>
+    </div>
+  </section>
 
 </body>
 </html>
+
+    
