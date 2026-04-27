@@ -3,151 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lahari | Portfolio</title>
+  <title>Lahari Vippagunta — AI Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
 
 <body>
 
+  <nav>
+    <span class="nav-name">Lahari V.</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
   <!-- HERO -->
   <section class="hero">
-    <h1>Hi, I'm Lahari 👋</h1>
-
-    <p class="tagline">
-      Building GenAI Systems with a Product Mindset
-    </p>
-
-    <p class="subtext">
-      I design AI applications that are usable, explainable, and built for real-world impact.
-    </p>
-
-    <a href="#projects" class="cta">Explore My Work ↓</a>
+    <div class="hero-inner">
+      <div class="hero-tag">AI / ML Engineer · Generative AI</div>
+      <h1>Building <em>intelligent</em><br/>systems that work.</h1>
+      <p class="hero-sub">
+        I design GenAI applications that are usable, explainable,<br/>
+        and built for real-world impact — with a product mindset.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#projects" class="cta-primary">View Projects →</a>
+        <a href="#contact" class="cta-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-ticker">
+      <span>RAG · LLM Agents · Agentic AI · LangGraph · CrewAI · Prompt Engineering · HuggingFace · AWS · Streamlit · XGBoost · PyTorch ·&nbsp;</span>
+      <span aria-hidden="true">RAG · LLM Agents · Agentic AI · LangGraph · CrewAI · Prompt Engineering · HuggingFace · AWS · Streamlit · XGBoost · PyTorch ·&nbsp;</span>
+    </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>About Me</h2>
+  <!-- ABOUT + EDUCATION + CERTS in one tight band -->
+  <section id="about" class="about-band">
 
-    <p>
-      I'm a Data Scientist with ~2.5 years of experience working on Gen AI solutions.
-      I’m particularly interested in Generative AI, Agentic AI, and building systems
-      that bridge the gap between technical capability and real-world user needs.
-    </p>
+    <div class="band-col wide">
+      <div class="section-eyebrow">About</div>
+      <p class="about-text">
+        Data Scientist with <strong>~2.5 years</strong> of experience delivering Gen AI solutions for US Fortune 100 companies at EXL Services. My work sits at the intersection of Generative AI, Agentic systems, and product thinking — I care about systems that users can actually trust and use.
+      </p>
+    </div>
+
+    <div class="band-col">
+      <div class="section-eyebrow">Education</div>
+      <p class="edu-title">IIT BHU Varanasi</p>
+      <p class="edu-sub">Bachelor's · Engineering</p>
+      <div class="medal">🥇 Smt. Indira Tripathi Gold Medal</div>
+    </div>
+
   </section>
 
- <!-- EDUCATION -->
-  <section class="education">
-    <h2>Education</h2>
-    <p>
-      <strong>Bachelors from Indian Institute of Technology (IIT) BHU Varanasi</strong><br/>
-      Received Smt. Indira Tripathi Gold Medal 🥇
-    </p>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience-section">
+    <div class="section-eyebrow">Experience</div>
+
+    <div class="exp-row">
+      <div class="exp-left">
+        <span class="exp-period">2022 — Present</span>
+      </div>
+      <div class="exp-right">
+        <div class="exp-role">Data Scientist — Generative AI</div>
+        <div class="exp-company">EXL Services</div>
+        <div class="exp-desc">Consulting AI engineer for US Fortune 100 companies, building production-grade GenAI pipelines, RAG systems, and agentic workflows.</div>
+      </div>
+    </div>
+
+    <div class="cert-strip">
+      <div class="section-eyebrow" style="margin-bottom:16px">Certifications & Training</div>
+      <div class="cert-grid">
+        <div class="cert-item"><span class="cert-dot"></span>Nvidia Certified — Gen AI & LLMs</div>
+        <div class="cert-item"><span class="cert-dot"></span>IBM Agentic AI — LangChain / LangGraph</div>
+        <div class="cert-item"><span class="cert-dot"></span>Multi AI Agent Systems with CrewAI</div>
+        <div class="cert-item"><span class="cert-dot"></span>AWS Cloud Practitioner Essentials</div>
+        <div class="cert-item"><span class="cert-dot"></span>Claude Code in Action</div>
+      </div>
+    </div>
   </section>
 
-  <!-- WORK EXPERIENCE -->
-  <section class="work-experience">
-    <h2>Work Experience</h2>
-    <p>
-      <strong>Data Scientist (Generative AI) at EXL Services</strong><br/>
-      Consulting AI engineer for US Fortune 100 companies
-    </p>
-  </section>
-
-  <!-- FURTHER TRAINING -->
-  <section class="further-training">
-    <h2>Further Training</h2>
-    <ul>
-      <li>Nvidia Certified Associate - Gen AI and LLMs</li>
-      <li>IBM Agentic AI - Langchain Langgraph</li>
-      <li>Multi AI Agent Systems with CrewAI</li>
-      <li>AWS Cloud Practioner Essentials</li>
-      <li>Claude Code in Action</li>
-    </ul>
-  </section>
-  
   <!-- PROJECTS -->
-  <section id="projects" class="projects">
-  <h2>Projects</h2>
-
-  <div class="project-grid">
-
-    <div class="project-card">
-      <h3>Adaptive RAG AI System</h3>
-
-      <p>
-        A production-grade AI system that intelligently routes queries between a fast RAG pipeline and a deep multi-agent reasoning pipeline based on query complexity.
-      </p>
-
-      <div class="tech">
-        <span>RAG</span>
-        <span>Langgraph</span>
-        <span>Streamlit</span>
-        <span>LLM</span>
-      </div>
-
-      <a href="https://github.com/vl-18/adaptive-rag-system">GitHub</a>
+  <section id="projects" class="projects-section">
+    <div class="projects-header">
+      <div class="section-eyebrow">Projects</div>
+      <a href="https://github.com/vl-18" class="gh-all-link" target="_blank">All on GitHub ↗</a>
     </div>
 
-    <div class="project-card">
-      <h3>PromptOps Platform</h3>
+    <div class="project-grid">
 
-      <p>
-        A modular PromptOps framework for building and evaluating Retrieval-Augmented Generation (RAG) applications with multi-prompt orchestration and LLM integration.
-      </p>
+      <a href="https://github.com/vl-18/adaptive-rag-system" class="project-card featured" target="_blank">
+        <div class="card-top">
+          <div class="card-number">01</div>
+          <div class="card-badge">Featured</div>
+        </div>
+        <h3>Adaptive RAG System</h3>
+        <p>Production-grade AI that intelligently routes queries between a fast RAG pipeline and a deep multi-agent reasoning pipeline based on query complexity.</p>
+        <div class="tech-row">
+          <span>LangGraph</span><span>RAG</span><span>Streamlit</span><span>LLM Routing</span>
+        </div>
+        <div class="card-arrow">↗</div>
+      </a>
 
-      <div class="tech">
-        <span>RAG</span>
-        <span>Prompt Engineering</span>
-        <span>Evaluation</span>
-      </div>
+      <a href="https://github.com/vl-18/promptops-rag-platform" class="project-card" target="_blank">
+        <div class="card-top">
+          <div class="card-number">02</div>
+        </div>
+        <h3>PromptOps Platform</h3>
+        <p>Modular RAG framework for policy queries. Supports CRISPE & CRAFT prompt frameworks, switchable live in a Streamlit UI with a built-in evaluation layer.</p>
+        <div class="tech-row">
+          <span>RAG</span><span>Prompt Eng.</span><span>Evaluation</span><span>Streamlit</span>
+        </div>
+        <div class="card-arrow">↗</div>
+      </a>
 
-      <a href="https://github.com/vl-18/promptops-rag-platform">GitHub</a>
+      <a href="https://github.com/vl-18/customer-churn-prediction" class="project-card" target="_blank">
+        <div class="card-top">
+          <div class="card-number">03</div>
+        </div>
+        <h3>Customer Churn Prediction</h3>
+        <p>End-to-end ML system to predict at-risk customers and enable proactive retention strategies using gradient boosting and feature engineering.</p>
+        <div class="tech-row">
+          <span>XGBoost</span><span>Scikit-learn</span><span>Python</span>
+        </div>
+        <div class="card-arrow">↗</div>
+      </a>
+
+      <a href="https://github.com/vl-18/abstractive-text-summarization" class="project-card" target="_blank">
+        <div class="card-top">
+          <div class="card-number">04</div>
+        </div>
+        <h3>Abstractive Text Summarization</h3>
+        <p>Fine-tuned T5-small on CNN/DailyMail to generate news summaries. Achieves ROUGE-1 of 0.312 — outperforming zero-shot baseline by +2.6%. Includes a live Gradio demo.</p>
+        <div class="tech-row">
+          <span>PyTorch</span><span>HuggingFace</span><span>ROUGE</span><span>Gradio</span>
+        </div>
+        <div class="card-arrow">↗</div>
+      </a>
+
     </div>
-
-    <div class="project-card">
-      <h3>Customer Churn Prediction</h3>
-
-      <p>
-        Built an end-to-end machine learning system to predict customer churn and identify at-risk users, enabling proactive retention strategies.
-      </p>
-
-      <div class="tech">
-        <span>Machine learning</span>
-        <span>XG Boost</span>
-      </div>
-
-      <a href="https://github.com/vl-18/customer-churn-prediction">GitHub</a>
-    </div>
-
-
-    <div class="project-card">
-      <h3>Abstractive Text Summarization</h3>
-
-      <p>
-        Fine-tuning T5-small on CNN/DailyMail dataset to generate abstractive summaries of news articles. Achieves ROUGE-1 of 0.312, outperforming zero-shot baseline by +2.6%. Includes training pipeline, evaluation, and an interactive Gradio demo.
-      </p>
-
-      <div class="tech">
-        <span>Pytorch</span>
-        <span>Hugging Face Transformers</span>
-        <span>Rouge</span>
-      </div>
-
-      <a href="https://github.com/vl-18/abstractive-text-summarization">GitHub</a>
-    </div>
-
-  </div>
-</section>
-  <!-- CONTACT -->
-  <section class="contact">
-    <h2>Contact</h2>
-
-    <p>Email: vippaguntalahari@gmail.com</p>
-    <p>
-      <a href="https://www.linkedin.com/in/lahari-vippagunta-7a257b192/">LinkedIn</a> |
-      <a href="https://github.com/vl-18">GitHub</a>
-    </p>
   </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="contact-inner">
+      <div class="section-eyebrow">Contact</div>
+      <h2 class="contact-heading">Let's build<br/><em>something real.</em></h2>
+      <div class="contact-links">
+        <a href="mailto:vippaguntalahari@gmail.com" class="contact-link">
+          <span class="link-label">Email</span>
+          <span class="link-val">vippaguntalahari@gmail.com ↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/lahari-vippagunta-7a257b192/" target="_blank" class="contact-link">
+          <span class="link-label">LinkedIn</span>
+          <span class="link-val">lahari-vippagunta ↗</span>
+        </a>
+        <a href="https://github.com/vl-18" target="_blank" class="contact-link">
+          <span class="link-label">GitHub</span>
+          <span class="link-val">vl-18 ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2025 Lahari Vippagunta</span>
+    <span>Built with intention.</span>
+  </footer>
 
 </body>
 </html>
