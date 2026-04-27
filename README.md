@@ -14,27 +14,8 @@ I’m particularly interested in:
 - Generative AI
 - Retrieval-Augmented Generation (RAG)
 - Agentic AI
+- AI Agents
 - Building usable, real-world AI applications
-
----
-
-## 🚀 Featured Projects
-
-### 🤖 GenAI Policy Coach
-PromptOps-driven RAG system with interactive CRISPE & CRAFT frameworks.
-
-👉 https://github.com/vl-18/promptops-rag-platform
-
----
-
-### 📈 Stock Prediction System
-LSTM-based stock forecasting with focus on usability and insights.
-
----
-
-### 💬 AI WhatsApp Agent (In progress)
-AI assistant for automating customer conversations and lead qualification.
-
 
 ---
 
