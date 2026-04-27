@@ -8,7 +8,7 @@ This is my personal portfolio website showcasing my work in **GenAI, Machine Lea
 
 ## 👋 About Me
 
-I'm a Data Scientist with ~2.5 years of experience, focused on building **GenAI systems with a product mindset**.
+I'm a Data Scientist with ~2.5 years of experience, focused on building **GenAI systems**.
 
 I’m particularly interested in:
 - Generative AI
