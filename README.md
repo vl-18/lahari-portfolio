@@ -1,6 +1,6 @@
 # 🌐 Lahari's Portfolio
 
-This is my personal portfolio website showcasing my work in **GenAI, Machine Learning, and AI-driven product development**.
+This is my portfolio website showcasing my work in **GenAI, Machine Learning, and AI-driven product development**.
 
 🔗 Live Site: https://vl-18.github.io/lahari-portfolio/
 
@@ -8,7 +8,7 @@ This is my personal portfolio website showcasing my work in **GenAI, Machine Lea
 
 ## 👋 About Me
 
-I'm a Data Scientist with ~2.5 years of experience, focused on building **GenAI systems**.
+I'm an AI Engineer t with 3 years of experience, focused on building **GenAI systems**.
 
 I’m particularly interested in:
 - Generative AI
