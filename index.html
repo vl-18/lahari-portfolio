@@ -33,13 +33,13 @@
       <!-- PROOF STATS — the signature element -->
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-num">500+</span>
-          <span class="stat-label">portfolios processed/month</span>
+          <span class="stat-num">1 wk→0</span>
+          <span class="stat-label">analyst research time per portfolio</span>
         </div>
         <div class="stat-div"></div>
         <div class="stat">
           <span class="stat-num">200+</span>
-          <span class="stat-label">advisor hours recovered/month</span>
+          <span class="stat-label">analyst hours recovered/month</span>
         </div>
         <div class="stat-div"></div>
         <div class="stat">
@@ -107,7 +107,7 @@
         <div class="exp-role">Lead AI Engineer <span class="exp-promo">↑ Promoted Oct 2025</span></div>
         <div class="exp-company">EXL Services · Noida, India</div>
         <ul class="exp-bullets">
-          <li>Owned end-to-end architecture of a Strands Agent system on AWS Bedrock AgentCore automating portfolio review for a leading US investment management firm — 500+ portfolios/month, 200+ advisor hours recovered/month, zero human touchpoints in the standard flow.</li>
+          <li>Owned end-to-end architecture of a Strands Agent system on AWS Bedrock AgentCore for T. Rowe Price ($1.8T AUM) — automating the full analyst research workflow for advisor-submitted portfolio reviews. What took analysts one week per portfolio (API data pull, web research, historical analysis, model comparison, report writing) now runs end-to-end with zero human touchpoints. 500+ portfolios/month, 200+ analyst hours recovered/month.</li>
           <li>Built and deployed an AWS Step Functions pipeline orchestrating 8 parallel LLM prompts serving 10K+ daily enterprise requests at P90 &lt; 5s. Lifted retrieval accuracy 72% → 97% and faithfulness 0.65 → 0.92 via hybrid Cohere embeddings + RAGAS-driven evaluation.</li>
           <li>Cut LLM API spend 30% via semantic caching and DynamoDB state management, eliminating ~$100K/year in client manual review costs. Ran a structured benchmark across Claude and Amazon Nova — recommended and owned the switch to Nova for 22% additional monthly savings.</li>
           <li>Architected serverless RAG-Salesforce integration (Lambda + API Gateway) across 3 business units — reduced processing time 35%, recovered ~$90K/year in analyst capacity.</li>
@@ -140,15 +140,16 @@
       <!-- PROJECT 1 -->
       <div class="project-card featured">
         <div class="card-top">
-          <div class="card-tag">Investment Management · US Fortune 500</div>
+          <div class="card-tag">T. Rowe Price · $1.8T AUM · Investment Management</div>
           <div class="card-badge">Agentic</div>
         </div>
-        <h3>AI Portfolio Construction & Strategy Analyst</h3>
-        <p>Architected a 6-skill Strands agent on AWS Bedrock AgentCore that fully automates portfolio review — ingesting unstructured data from third-party fund APIs, synthesizing cross-source signals, and generating structured analyst reports. Replaced a fully manual, multi-day advisor process.</p>
+        <h3>AI Portfolio Strategy Analyst</h3>
+        <p>Architected a 6-skill Strands agent on AWS Bedrock AgentCore that automates the full analyst research workflow — from API data ingestion and web research through allocation analysis, model comparison, and structured report generation. Analysts who submitted portfolios for review previously waited a week per portfolio; the agent handles the entire research pipeline with zero human touchpoints in the standard flow.</p>
         <div class="impact-row">
+          <div class="impact-chip">1 week → automated per portfolio</div>
           <div class="impact-chip">500+ portfolios/month</div>
-          <div class="impact-chip">200+ advisor hrs recovered/month</div>
-          <div class="impact-chip">70% reduction in advisor prep time</div>
+          <div class="impact-chip">200+ analyst hrs recovered/month</div>
+          <div class="impact-chip">70% reduction in prep time</div>
         </div>
         <div class="tech-row">
           <span>AWS Bedrock</span><span>AgentCore</span><span>Strands</span><span>Lambda</span><span>Agentic AI</span>
@@ -247,77 +248,140 @@
 
       <div class="cs-eyebrow-row">
         <div class="section-eyebrow">Case Study</div>
-        <div class="cs-tag">Investment Management · Agentic AI</div>
+        <div class="cs-tag">Investment Management · Agentic AI · AWS Bedrock</div>
       </div>
 
-      <h2 class="cs-heading">How I replaced a multi-day manual process<br/>with a <em>zero-touchpoint agentic system.</em></h2>
+      <h2 class="cs-heading">How I replaced a week-long manual process<br/>with a <em>zero-touchpoint agentic analyst.</em></h2>
 
-      <!-- EDIT THIS BLOCK: Add 1–2 sentences on the client context. Keep it anonymized. -->
       <div class="cs-block">
         <div class="cs-label">The Client</div>
-        <p>A leading US investment management firm managing [X]+ client portfolios. Their advisors spent significant time manually aggregating fund data, cross-referencing strategy reports, and writing portfolio review documents — a repeatable, structured process that was consuming hours of high-value advisor time each week.</p>
+        <p>
+          T. Rowe Price is one of the world's largest active asset managers — <strong>$1.8 trillion in AUM</strong> across 8,000+ retirement plans, 2.3 million plan participants, and clients in 50+ countries. Their investment analysts are among the most experienced in the industry: each one covers a book of advisor-submitted portfolios, conducting deep research before making allocation recommendations.
+        </p>
+        <p style="margin-top: 12px;">
+          The problem was that this research process — rigorous, structured, and highly repeatable — was consuming an enormous amount of analyst time that could have been spent on judgment rather than data retrieval.
+        </p>
       </div>
 
-      <!-- EDIT THIS BLOCK: Describe the problem as you found it. Be specific. -->
       <div class="cs-block">
         <div class="cs-label">The Problem</div>
-        <p>[EDIT: Describe what the manual process looked like before you arrived. How many advisors? How many hours per portfolio? What were they doing manually — pulling data from APIs, cross-referencing PDFs, writing reports? What broke down at scale? What was the business cost of the delay?]</p>
-        <p style="margin-top:12px;">The core constraint: the data lived across multiple third-party fund and strategy APIs with inconsistent schemas, making simple automation brittle. The business needed something that could reason across sources, not just retrieve from one.</p>
+        <p>
+          When an advisor at T. Rowe Price submits a portfolio for review, an analyst takes over. Before they can make a single recommendation, they need to do five things manually:
+        </p>
+        <ol class="cs-numbered-list">
+          <li>Research the portfolio manager — their track record, strategy philosophy, recent commentary, and public bio — using web search and internal sources.</li>
+          <li>Pull historical portfolio data from multiple third-party fund and strategy APIs with inconsistent schemas and rate limits.</li>
+          <li>Analyze how the current allocation compares to historical positioning — drift, concentration shifts, risk changes.</li>
+          <li>Model comparison — benchmark the portfolio against relevant models on risk metrics, margins, and performance across time horizons.</li>
+          <li>Write a structured analyst report consolidating all of the above into a recommendation document.</li>
+        </ol>
+        <p style="margin-top: 16px;">
+          Each full portfolio review took <strong>one analyst one week</strong> — end to end. With 500+ portfolios submitted per month, this was a scaling wall. The team couldn't take on more volume without adding headcount, and analysts were spending the majority of their time on retrieval and formatting, not on the actual judgment work they were hired for.
+        </p>
+        <p style="margin-top: 12px;">
+          A simple automation wouldn't cut it. The data lived across fragmented APIs. The web research required real-time search and synthesis. The historical analysis required contextual retrieval, not keyword lookup. And the final report required coherent narrative generation — not template fill-in. This needed an agent that could reason across sources, not just retrieve from one.
+        </p>
       </div>
 
-      <!-- EDIT THIS BLOCK: Explain your design thinking, not just what you built. -->
       <div class="cs-block">
-        <div class="cs-label">The Architecture Decision</div>
-        <p>The first instinct is always to reach for a RAG pipeline. But this problem required <strong>cross-source reasoning, not retrieval</strong> — the system needed to synthesize signals from fund performance data, strategy commentary, and historical reference points, then generate a coherent narrative. A single-step LLM call would hallucinate. A naive RAG would retrieve without reasoning.</p>
-        <p style="margin-top:12px;">I designed a <strong>6-skill Strands agent on AWS Bedrock AgentCore</strong> with explicit skill decomposition:</p>
+        <div class="cs-label">The Architecture</div>
+        <p>
+          I designed a <strong>6-skill Strands agent on AWS Bedrock AgentCore</strong>. The core design principle was explicit skill decomposition — each unit of work that a human analyst does becomes a discrete, testable, independently-observable agent skill. This makes the system auditable, debuggable, and extensible without touching the orchestration layer.
+        </p>
+
         <div class="cs-skills-grid">
-          <!-- EDIT: Replace these skill labels with your actual 6 skills -->
-          <div class="cs-skill"><span class="cs-skill-num">01</span><div><strong>[Skill Name]</strong><br/>[One sentence: what this skill does and why it exists as a separate unit]</div></div>
-          <div class="cs-skill"><span class="cs-skill-num">02</span><div><strong>[Skill Name]</strong><br/>[One sentence: what this skill does and why it exists as a separate unit]</div></div>
-          <div class="cs-skill"><span class="cs-skill-num">03</span><div><strong>[Skill Name]</strong><br/>[One sentence: what this skill does and why it exists as a separate unit]</div></div>
-          <div class="cs-skill"><span class="cs-skill-num">04</span><div><strong>[Skill Name]</strong><br/>[One sentence: what this skill does and why it exists as a separate unit]</div></div>
-          <div class="cs-skill"><span class="cs-skill-num">05</span><div><strong>[Skill Name]</strong><br/>[One sentence: what this skill does and why it exists as a separate unit]</div></div>
-          <div class="cs-skill"><span class="cs-skill-num">06</span><div><strong>[Skill Name]</strong><br/>[One sentence: what this skill does and why it exists as a separate unit]</div></div>
+          <div class="cs-skill">
+            <span class="cs-skill-num">01</span>
+            <div>
+              <strong>Data Ingestion Lambda</strong><br/>
+              Calls third-party fund and strategy APIs, normalizes inconsistent schemas, and stages structured data for downstream skills. Isolated as a Lambda so API failures are contained and retryable without restarting the full agent run.
+            </div>
+          </div>
+          <div class="cs-skill">
+            <span class="cs-skill-num">02</span>
+            <div>
+              <strong>Web Research Skill</strong><br/>
+              Runs targeted web searches to build a profile of the portfolio manager — bio, investment philosophy, recent public commentary, and track record signals. Produces a structured summary the downstream skills can reference.
+            </div>
+          </div>
+          <div class="cs-skill">
+            <span class="cs-skill-num">03</span>
+            <div>
+              <strong>Historical Research Skill</strong><br/>
+              Retrieves the relevant historical data for the specific portfolio request — not a broad dump, but contextually filtered by the advisor's current portfolio composition and the review period in scope.
+            </div>
+          </div>
+          <div class="cs-skill">
+            <span class="cs-skill-num">04</span>
+            <div>
+              <strong>Allocation Review Skill</strong><br/>
+              Analyzes historical vs. current portfolio allocation — identifying drift, concentration changes, sector shifts, and positioning changes that an analyst would flag in a review.
+            </div>
+          </div>
+          <div class="cs-skill">
+            <span class="cs-skill-num">05</span>
+            <div>
+              <strong>Model Comparison Skill</strong><br/>
+              Benchmarks the portfolio against relevant models across multiple dimensions: risk metrics, return margins, volatility, and historical alignment — the quantitative backbone of the analyst recommendation.
+            </div>
+          </div>
+          <div class="cs-skill">
+            <span class="cs-skill-num">06</span>
+            <div>
+              <strong>Writeup Generator Skill</strong><br/>
+              Pulls outputs from all five upstream skills and generates the final structured analyst report — narrative, data tables, and recommendation summary — in the format analysts and advisors expect.
+            </div>
+          </div>
         </div>
-        <!-- EDIT: Describe 1–2 key tradeoffs you made in the architecture -->
-        <p style="margin-top:20px;">[EDIT: Describe a specific tradeoff or hard decision in the architecture — e.g., why you chose Strands over LangGraph here, how you handled failure recovery, how you made the agent's outputs auditable, what you considered but rejected.]</p>
+
+        <p style="margin-top: 24px;">
+          I chose <strong>Strands on AWS Bedrock AgentCore</strong> over LangGraph here for a specific reason: the client's infrastructure was already AWS-native, and AgentCore gave us production-grade skill isolation, IAM-controlled tool access, and native observability with CloudWatch — without needing to build and maintain an orchestration layer ourselves. The tradeoff was less flexibility in custom control flow, which was acceptable because the workflow here is largely linear with well-defined hand-offs between skills.
+        </p>
+        <p style="margin-top: 12px;">
+          Failure recovery was designed at the skill level — each skill has explicit retry logic and a failure state that the agent can report on without halting the full run. This meant partial outputs (e.g., web research succeeded but one API failed) were still usable and flagged rather than silently dropped.
+        </p>
       </div>
 
-      <!-- EDIT THIS BLOCK: Add what went wrong or what was hard. This is what makes case studies credible. -->
       <div class="cs-block">
         <div class="cs-label">What Was Hard</div>
-        <p>[EDIT: Every real project has something that didn't work the first time. What broke in testing? What edge case did the agent fail on? How did you solve it? This is the section that separates someone who actually built this from someone who read about it. Be specific — one concrete problem and how you fixed it.]</p>
+        <p>
+          [EDIT — add your own here. This is the most credibility-building section. One specific thing that broke in testing, a real edge case the agent failed on, or a design assumption that turned out to be wrong — and exactly how you fixed it. Examples of what works well here: "The historical research skill initially retrieved too broad a window, causing the model comparison to hallucinate trend signals that didn't exist. We fixed this by..." or "API rate limits from the third-party fund data provider meant the ingestion lambda would fail silently under load. We solved this by..."]
+        </p>
       </div>
 
-      <!-- EDIT THIS BLOCK: Results. Use exact numbers from your resume. -->
       <div class="cs-block">
         <div class="cs-label">The Outcome</div>
         <div class="cs-results">
+          <div class="cs-result">
+            <span class="cs-result-num">1 week</span>
+            <span class="cs-result-label">→ automated, per portfolio</span>
+          </div>
           <div class="cs-result">
             <span class="cs-result-num">500+</span>
             <span class="cs-result-label">portfolios processed per month</span>
           </div>
           <div class="cs-result">
             <span class="cs-result-num">200+</span>
-            <span class="cs-result-label">advisor hours recovered per month</span>
+            <span class="cs-result-label">analyst hours recovered monthly</span>
           </div>
           <div class="cs-result">
             <span class="cs-result-num">70%</span>
-            <span class="cs-result-label">reduction in advisor prep time</span>
-          </div>
-          <div class="cs-result">
-            <span class="cs-result-num">Zero</span>
-            <span class="cs-result-label">human touchpoints in standard flow</span>
+            <span class="cs-result-label">reduction in analyst prep time</span>
           </div>
         </div>
-        <!-- EDIT: Add 1–2 sentences on what the outcome meant for the business -->
-        <p style="margin-top:24px;">[EDIT: What did the advisors say once it was live? Did it expand to other teams? Did it lead to follow-on work? Even one sentence of qualitative outcome makes the numbers land harder.]</p>
+        <p style="margin-top: 24px;">
+          Analysts who had spent the majority of their week on data retrieval and report formatting could now focus entirely on judgment — reviewing the agent's output, interrogating its reasoning, and making the final recommendation call. The system handled the structured, repeatable research work; the analysts handled what they were actually hired to do.
+        </p>
+        <p style="margin-top: 12px;">
+          [EDIT — add one sentence here if you have it: did this expand to other teams, lead to follow-on scope, or get positive feedback from the analysts directly? Even one qualitative data point makes the numbers land harder.]
+        </p>
       </div>
 
-      <!-- EDIT THIS BLOCK: One sentence takeaway / lesson -->
       <div class="cs-block cs-takeaway">
         <div class="cs-label">Takeaway</div>
-        <p class="cs-takeaway-text">[EDIT: One or two sentences on what you'd do differently, what this project taught you about agentic design, or what principle you now apply to every new agentic project. This signals engineering maturity.]</p>
+        <p class="cs-takeaway-text">
+          The right architecture for an agentic system isn't the most sophisticated one — it's the one where every skill does exactly one job, fails loudly when it can't, and hands off a clean output the next skill can trust. Decompose first. Orchestrate second.
+        </p>
       </div>
 
     </div>
@@ -367,7 +431,7 @@
     <div class="contact-inner">
       <div class="section-eyebrow">Contact</div>
       <h2 class="contact-heading">Building serious<br/><em>agentic infrastructure?</em></h2>
-      <p class="contact-sub">I'm currently available for senior roles and freelance contracts. If you're building production agentic systems and need someone who's done it before — let's talk.</p>
+      <p class="contact-sub">I'm currently available for senior remote roles and freelance contracts in the US/EU market. If you're building production agentic systems and need someone who's done it before — let's talk.</p>
       <div class="contact-links">
         <a href="mailto:vippaguntalahari@gmail.com" class="contact-link">
           <span class="link-label">Email</span>
@@ -386,7 +450,7 @@
   </section>
 
   <footer>
-    <span>© 2026 Lahari Vippagunta</span>
+    <span>© 2025 Lahari Vippagunta</span>
     <span>Open to remote · IST timezone</span>
   </footer>
 
