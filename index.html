@@ -345,7 +345,16 @@
       <div class="cs-block">
         <div class="cs-label">What Was Hard</div>
         <p>
-          [EDIT — add your own here. This is the most credibility-building section. One specific thing that broke in testing, a real edge case the agent failed on, or a design assumption that turned out to be wrong — and exactly how you fixed it. Examples of what works well here: "The historical research skill initially retrieved too broad a window, causing the model comparison to hallucinate trend signals that didn't exist. We fixed this by..." or "API rate limits from the third-party fund data provider meant the ingestion lambda would fail silently under load. We solved this by..."]
+          The hardest part wasn't building the agent - it was making the agent reason correctly over <strong>messy, inconsistent historical data</strong>. Unlike a clean database workflow, portfolio history came from multiple sources and varied significantly across advisors, strategies, and time periods. The initial retrieval approach often pulled a window that was too broad, giving the model more historical context than was actually relevant.
+        </p>
+        <p>
+          That created a subtle failure mode: the model could produce a <strong>plausible-sounding trend that wasn't supported by the portfolio's relevant history</strong>. In an analyst workflow, that is much more dangerous than simply returning an incorrect answer — the output can look convincing enough to pass a superficial review.
+        </p>
+        <p> 
+          I addressed this by making historical retrieval <strong>context-aware rather than time-window based</strong>. The retrieval logic was constrained using the portfolio's current composition, relevant review period, and the specific signal being investigated before passing context to the downstream analysis skill. I also separated retrieval from interpretation so that the model couldn't silently expand the evidence it was reasoning over.
+        </p>
+        <p> 
+          The broader lesson was that <strong>better prompting wasn't the solution</strong>. The reliability problem had to be solved at the system-design level: control what evidence the model sees, make each skill's inputs explicit, and ensure downstream reasoning is grounded in a bounded set of relevant data. 
         </p>
       </div>
 
